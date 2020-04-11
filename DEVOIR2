@@ -1,7 +1,4 @@
 import spacy, re
-from six.moves import urllib
-
-
 
 filepath = input("Le chemin du fichier à traiter ? ")
 f = open( filepath ,"r")
