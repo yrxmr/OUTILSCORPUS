@@ -5,9 +5,9 @@ import random
 
 
 with open("/home/y/Documents/articlejv.txt") as f1, open("/home/y/Documents/articlejv2.txt") as f2:
-    file1 = f1.readline()
-    file2 = f2.readline()
-    TRAIN_DATA=[(file1, {"entities": [(200, 206, "ORG"),(252, 258, "ORG"),(1090, 1097, "ORG"),(307,313,"LOC"),(1067,1074,"ORG"),(1077,1083,"ORG")]})]
+    file1 = f1.read()
+    file2 = f2.read()
+    TRAIN_DATA=[(file1, {"entities": [(200, 206, "ORG"),(252, 258, "ORG"),(1090, 1097, "ORG"),(306,313,"LOC"),(1066,1074,"ORG"),(1076,1083,"ORG"),(1710,1719,"ORG"),(1732,1736,"ORG")]})]
 
     
     nlp = spacy.load('fr_core_news_sm')
@@ -57,6 +57,7 @@ with open("/home/y/Documents/articlejv.txt") as f1, open("/home/y/Documents/arti
     for text, _ in TRAIN_DATA:
         doc = nlp2(text)
         print("Entities", [(ent.text, ent.label_) for ent in doc.ents])
+
 
 doc = nlp2(file2)
 for ent in doc.ents:
