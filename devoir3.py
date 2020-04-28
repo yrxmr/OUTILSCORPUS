@@ -4,7 +4,7 @@ from pathlib import Path
 import random
 
 
-with open("/home/y/Documents/articlejv.txt") as f1, open("/home/y/Documents/articlejv2.txt") as f2:
+with open("articlejv.txt") as f1, open("articlejv2.txt") as f2:
     file1 = f1.read()
     file2 = f2.read()
     TRAIN_DATA=[(file1, {"entities": [(200, 206, "ORG"),(252,262,"MISC"),(307,313,"LOC"),(599,605,"ORG"),(838,851,"PER"),(871,884,"ORG"),
